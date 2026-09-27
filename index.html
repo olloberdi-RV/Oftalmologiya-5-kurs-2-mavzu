@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="description" content="Oftalmologiya bo‘yicha interaktiv web o‘quv qo‘llanma.">
+  <title>Oftalmologiya — web o‘quv qo‘llanma</title>
+  <link rel="icon" href="assets/icons/eye.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">Asosiy mazmunga o‘tish</a>
+  <header class="topbar">
+    <button class="icon-button menu-toggle" id="menuToggle" aria-label="Mundarijani ochish" aria-expanded="false">☰</button>
+    <a class="brand" href="#top" aria-label="Bosh sahifa">
+      <span class="brand-mark" aria-hidden="true">◉</span>
+      <span><strong>OFTALMOLOGIYA</strong><small>WEB O‘QUV QO‘LLANMA</small></span>
+    </a>
+    <div class="top-actions">
+      <label class="global-search"><span class="search-icon" aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Qo‘llanmadan qidiring…" autocomplete="off" aria-label="Qo‘llanmadan qidiring"><kbd>Ctrl K</kbd></label>
+      <button class="icon-button" id="themeToggle" aria-label="Rang rejimini almashtirish" title="Rang rejimini almashtirish">◐</button>
+    </div>
+  </header>
+
+  <div class="layout" id="top">
+    <aside class="sidebar" id="sidebar" aria-label="Mundarija">
+      <div class="side-heading"><span>MUNDARIJA</span><button id="closeMenu" class="icon-button close-menu" aria-label="Mundarijani yopish">×</button></div>
+      <div class="progress-card">
+        <div class="progress-label"><span>O‘rganilgan</span><strong id="progressText">0%</strong></div>
+        <div class="progress-track" role="progressbar" aria-label="O‘qilgan bo‘limlar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progressBar"></span></div>
+        <small id="progressMeta">0 bo‘limdan 0 tasi</small>
+      </div>
+      <nav id="contentsNav" class="contents-nav"></nav>
+      <div class="sidebar-foot">Tarkib manba hujjat asosida</div>
+    </aside>
+    <div class="sidebar-scrim" id="sidebarScrim"></div>
+
+    <main id="content" class="main-content">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> TIBBIY TA’LIM · OFTALMOLOGIYA</div>
+          <h1 id="heroTitle">Ko‘zning ko‘rish faoliyati</h1>
+          <p class="hero-subtitle">Oftalmologiya fanidan o‘quv qo‘llanma</p>
+          <p class="hero-description">Ko‘rish faoliyati, ko‘z refraksiyasi va akkomodatsiyasi bo‘yicha manba hujjatdagi materiallar.</p>
+          <a class="start-button" href="#lessonStart">O‘qishni boshlash <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="eye-graphic"><span></span></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div></div>
+        <div class="hero-meta"><span><b id="topicCount">—</b> bo‘lim</span><i></i><span><b id="imageCount">—</b> rasm</span><i></i><span><b id="tableCount">—</b> jadval</span></div>
+      </section>
+
+      <div class="lesson-header" id="lessonStart">
+        <div><span class="section-kicker">O‘QUV MATERIALLARI</span><h2>Qo‘llanma mazmuni</h2></div>
+        <button class="bookmark-button" id="bookmarkButton" aria-pressed="false"><span aria-hidden="true">☆</span> Saqlab qo‘yish</button>
+      </div>
+      <div class="search-status" id="searchStatus" role="status" aria-live="polite"></div>
+      <article id="article" class="article-body" aria-label="O‘quv qo‘llanma matni"><div class="loading-state">Qo‘llanma yuklanmoqda…</div></article>
+      <footer class="page-footer"><span>Oftalmologiya · Web o‘quv qo‘llanma</span><a href="#top">Yuqoriga ↑</a></footer>
+    </main>
+  </div>
+
+  <button id="backToTop" class="back-to-top" aria-label="Sahifa yuqorisiga">↑</button>
+  <dialog id="lightbox" class="lightbox" aria-label="Rasmni kattalashtirish"><button id="lightboxClose" class="lightbox-close" aria-label="Yopish">×</button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></dialog>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/search.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
